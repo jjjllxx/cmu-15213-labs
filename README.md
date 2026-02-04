@@ -1,6 +1,11 @@
 # cmu-15213-labs
 Labs and notes for CS:APP (15-213: Computer Systems: A Programmer’s Perspective).
 
+## Useful Links
+[labs](https://csapp.cs.cmu.edu/3e/labs.html)
+
+[lectures](https://www.cs.cmu.edu/afs/cs/academic/class/18213-m25/www/lectures/)
+
 ## Environment Setup (for Apple Silicon Macs)
 ### Clone the repository
 ``` bash
@@ -29,7 +34,7 @@ docker run -it \
   --security-opt seccomp=unconfined \
   ubuntu:22.04 /bin/bash
 ```
-**Explanation:**
+Explanation:
 - `--platform linux/amd64` → run an x86_64 container (QEMU-emulated on M-chip).
 - `--cap-add=SYS_PTRACE --security-opt seccomp=unconfined` → allow debugging tools such as gdb, valgrind, etc.
 - `-v` → mount local folder into the container for easy development.
@@ -51,7 +56,7 @@ git clone https://github.com/pwndbg/pwndbg.git /opt/pwndbg || true
 cd /opt/pwndbg && ./setup.sh || true
 cd /proj
 ```
-**Notes:**
+Notes:
 - `gcc-multilib` and `libc6-dev-i386` enable 32-bit compilation (`-m32`), required by several labs.
 - `pwntools` and `pwndbg` are optional but useful for debugging, binary analysis, and the bomb / attack labs.
 ### Set up VS Code (recommended)
